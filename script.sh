@@ -1,14 +1,14 @@
 # ./download.sh
 
-zanzibar=1
-local=0
+zanzibar=$(python3 zanzibar.py)
+local=0.0
 
 sudo pigpiod
 
-while [ "$(echo "$local < $zanzibar" | bc)" -eq 1 ]
+while (( $(awk 'BEGIN{print "'$local'"<"'$zanzibar'"}' 2>/dev/null) ))
 do
-	zanzibar=$(python3 zanzibar.py)
-	local=$(python3 DHT.py 27 | tr -cd '0-9' | bc)
+	local=$(python3 DHT.py 27)
+	echo "$zanzibar -- $local"
 	python3 mechanics.py
 done
 
