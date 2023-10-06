@@ -247,7 +247,7 @@ if __name__== "__main__":
                d = s[1].read()
                abs = (d[4]*6.112*2.1674*math.e**((d[3]*17.67)/(d[3]+243.5))/(d[3]+273.15))
                #print("{:3.1f} {:3.1f}".format(d[4], d[3]))
-               print("{:.3f} {:2d} {} {:3.1f} {:3.1f} *".format(d[0], d[1], d[2], d[3], d[4]))
+               #print("{:.3f} {:2d} {} {:3.1f} {:3.1f} *".format(d[0], d[1], d[2], d[3], d[4]))
                print(round(abs,2))
       except KeyboardInterrupt:
          break
