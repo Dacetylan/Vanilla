@@ -5,6 +5,7 @@ local=$(python3 DHT.py 27)
 
 while [$zanzibar > $local ]
 do
-	python3 mechanics.py
+	echo $zanzibar
+	echo $local
 done
 ./upload.sh
