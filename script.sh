@@ -5,10 +5,10 @@ local=0
 
 while [ $zanzibar -lt $local ]
 do
-	zanzibar=1
-	local=2
-	echo $zanzibar
-	echo $local
+	zanzibar=$(python3 zanzibar.py)
+	local=$(python3 DHT.py)
+
+	python3 mechanics.py
 done
 
 ./upload.sh
