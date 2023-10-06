@@ -8,7 +8,7 @@ do
 	zanzibar=$(python3 zanzibar.py)
 	local=$(python3 DHT.py)
 
-	python3 mechanics.py
+	$(python3 mechanics.py)
 done
 
 ./upload.sh
