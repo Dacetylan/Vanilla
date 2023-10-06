@@ -3,6 +3,8 @@
 zanzibar=1
 local=0
 
+sudo pigpiod
+
 while [ "$local" -lt "$zanzibar" ]
 do
 	zanzibar=$(python3 zanzibar.py)
