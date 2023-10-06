@@ -1,11 +1,14 @@
 # ./download.sh
 
-zanzibar=$(python3 zanzibar.py)
-local=$(python3 DHT.py 27)
+zanzibar=1
+local=0
 
-while [$zanzibar > $local ]
+while [ $zanzibar -lt $local ]
 do
+	zanzibar=1
+	local=2
 	echo $zanzibar
 	echo $local
 done
+
 ./upload.sh
