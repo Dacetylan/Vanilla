@@ -6,7 +6,7 @@ local=0
 while [ $local -lt $zanzibar ]
 do
 	zanzibar=$(python3 zanzibar.py)
-	local=$(python3 DHT.py)
+	local=$(python3 DHT.py 27)
 	python3 mechanics.py
 done
 
